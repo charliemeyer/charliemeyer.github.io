@@ -3,6 +3,18 @@ body{
     margin: 0 auto;
 }
 
+a {
+    color: black;
+}
+
 #name, #contact {
     text-align: center;
+}
+
+#name {
+    margin-top: 15px;
+}
+
+.bold {
+    font-weight: bold;
 }
