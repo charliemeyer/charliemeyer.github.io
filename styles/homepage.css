@@ -1,3 +1,38 @@
 body {
     text-align: center;
+    background-color: #3498db;
+    color: white;
+    font-family: 'Roboto Slab', serif;
+}
+
+a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    padding: 10px;
+}
+
+a:hover {
+    padding: 7px;
+    border: 5px solid white;
+}
+
+img {
+    margin-bottom: 20px;
+    border: 5px solid white;
+}
+
+#navigation {
+    clear: both;
+    width: 345px;
+    margin: 0 auto;
+}
+
+#resume {
+    float: left;
+}
+
+#bio {
+    float: right;
 }
