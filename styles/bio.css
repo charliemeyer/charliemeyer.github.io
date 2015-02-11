@@ -1,0 +1,12 @@
+body {
+    text-align: center;
+    background-color: #3498db;
+    color: white;
+    font-family: 'Roboto Slab', serif;
+}
+
+#content {
+    width: 50%;
+    margin: 0 auto;
+    text-align: left;
+}
