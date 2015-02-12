@@ -1,7 +1,13 @@
-body{
+body {
+    font-family: 'Roboto Slab', Georgia, serif;
+    background-color: #3498db;
+}
+
+#content{
     width: 60%;
     margin: 20px auto;
-    font-family: 'Roboto Slab', Georgia, serif;
+    background-color: white;
+    padding: 20px;
 }
 
 h1, h2 {
