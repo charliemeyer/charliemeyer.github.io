@@ -1,19 +1,70 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Charles Meyer's Homepage</title>
-    <link rel="stylesheet" type="text/css" href="styles/homepage.css"/>
+  <head>
+    <title>charliemeyer.me</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css"/>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'/>
     <meta charset="utf-8" />
-</head>
-<body>
-    <h1>Charles Meyer's <br/>Homepage</h1>
-    <img src="charles_meyer.jpeg" alt="Picture of Charles Meyer"/>
-    <br/>
-    <div id="navigation">
-        <a id="resume" href="resume.html">Resume</a>
-        <a id="bio" href="bio.html">Short Bio</a>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="assets/tabs.js"></script>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+  </head>
+  <body>
+
+    <div id="content">
+      <div id='header' class='card'>
+        <div style='width: calc(100%-300px); float: left; text-align: left;'>
+          <h2>Charlie Meyer</h2>
+          <p>Tufts University '17</p>
+          <p><a href='mailto:charles.meyer@tufts.edu'>charles.meyer@tufts.edu</a></p>
+          <p><a href='http://github.com/charliemeyer' target='_blank'>github.com/charliemeyer</a></p>
+          <p>Aspiring software engineer, data scientist, teacher.</p>
+        </div>
+        <div id='picture'>
+          <img id="picture" src="assets/me.jpg" alt="Charlie Meyer's picture">
+        </div>
+        <div style='clear:both;'></div>
+      </div>
+      <div id="navigation">
+        <a href='#aboutme'>About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="assets/charles_meyer_resume.pdf">Resume</a>
+      </div>
+
+      <div class='card' id='aboutme'>
+
+        <h3>About Me</h3>
+
+        <p style='margin-left:15px;'>I like math, coding, the New England Patriots, learning new stuff, teaching other people new stuff, music, and It's Always Sunny in Philadelphia. Music is cool, I've been playing clarinet for ten years, singing in the Tufts Gospel Choir for two, and I listen to anything a streaming service will send my way. I code mostly web stuff, Python, C, and mostly using Sublime Text (ctrl+P for life). Elon Musk is my idol, and I can't wait for the day I can fly drive my Tesla to the spaceport to go to Mars on a SpaceX rocket. I'm also a DJ at WMFO, Friday morning timeslot like it's my job. </p>
+      </div>
+
+      <div id='projects'>
+        <div class='card project'>
+        <h3>Trendquiz</h3>
+        </div>
+        <div class='card project'>
+        <h3>Knoknok</h3>
+        </div>
+        <div class='card project'>
+        <h3>Group Project Helper</h3>
+        </div>
+        <div class='card project'>
+        <h3>Relaweather</h3>
+        </div>
+        <div class='card project'>
+        <h3>BasicTime</h3>
+        </div>
+        <div class='card project'>
+        <h3>GraphTime</h3>
+        </div>
+      </div>
+
+      <footer style='margin-top: 35px;'>
+        <p><b>&copy; Charlie Meyer 2015</b> | No UI frameworks were harmed in the making of this website </p>
+        <a href='mailto:charles.meyer@tufts.edu'>Email</a>
+        <a href='http://github.com/charliemeyer'>Github</a>
+      </footer>
     </div>
-</body>
+  </body>
 </html>
 
