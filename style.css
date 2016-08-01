@@ -8,7 +8,7 @@ body {
 }
 
 #content {
-    width: 80%;
+    width: 60%;
     max-width: 1000px;
     min-width: 700px;
     margin: 0px auto;
@@ -61,6 +61,10 @@ a:visited {
 
 #aboutme {
     text-align: justify;
+}
+
+#bio {
+    margin-left: 15px;
 }
 
 .project {
@@ -162,15 +166,21 @@ footer a {
 
 @media (max-width: 400px) {
     #content {
-        width: calc(100% - 20px);
+        min-width: 0px;
+        width: calc(100% - 40px);
     }
 
     #header {
         width: 300px;
+        text-align: center !important;
     }
 
     #header div {
         text-align: center;
         float: none;
+    }
+
+    #bio {
+        margin-left: 0px;
     }
 }
