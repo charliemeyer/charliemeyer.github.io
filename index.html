@@ -21,7 +21,7 @@
           <p>Aspiring software engineer, data scientist, teacher.</p>
         </div>
         <div id='picture'>
-          <img id="picture" src="me.jpg" alt="Charlie Meyer's picture">
+          <a href="me.jpg"><img id="picture" src="me_thumb.png" alt="Charlie Meyer's picture"></a>
         </div>
         <div style='clear:both;'></div>
       </div>
@@ -34,7 +34,12 @@
       <div class='card' id='aboutme'>
 
         <h3>About Me</h3>
-        <p style='margin-left:15px;'>I like math, coding, the New England Patriots, learning new stuff, teaching other people new stuff, music, and It's Always Sunny in Philadelphia. I've been playing clarinet for ten years, singing in the Tufts Gospel Choir for three, and I listen to any music a streaming service will send my way. When it comes to programming, Python is my scripting language of choice, but I'm not afraid to use C if it's what's needed to get the job done. I am a faithful Sublime Text user, and I always enjoy learning new ways to improve my workflow, whether it be a new UNIX command, git trick, or language function I didn't know about. I'm a member of Tufts Futurism Society, and hope that I can somehow help the future get here quicker with whatever it is I do.</p>
+        <p id='bio'>
+           I like math, coding, the New England Patriots, learning new stuff, teaching other people new stuff, music, and It's Always Sunny in Philadelphia.
+           I've been playing clarinet for ten years, singing in the Tufts Gospel Choir for three, and I listen to any music a streaming service will send my way.
+           When it comes to programming, Python is my scripting language of choice, but I'm not afraid to use C if it's what's needed to get the job done.
+           I'm a member of Tufts Futurism Society, and hope that I can somehow help the future get here quicker with whatever it is I do. 
+           My favorite colors are grey and blue.</p>
       </div>
 
       <div id='projects'>
@@ -61,6 +66,17 @@
         </ul>
         <a href='https://play.google.com/store/apps/details?id=com.ebcmsoftware.knoknok&hl=en' target='_blank' class='button' style='width: 150px;'>Link (Google Play)</a>
         <a href='https://github.com/ebcmsoftware/knoknok2' target='_blank' class='button'>Source</a>
+        </div>
+
+        <div class='card project'>
+        <h3>Auto Sched</h3>
+        <ul>
+            <li>Solution for scheduling people for work shifts.</li>
+            <li>Has a web front end running on Google App Engine for collecting worker availability data</li> 
+            <li>Optimal schedules are approximated using a probabilistic algorithm implemented in Python. (finding an optimal schedule is NP hard)</li>
+            <li>Built by me to help speed up my TA scheduling duties as Comp40 teaching fellow.</li>
+        </ul>
+        <a href='https://github.com/charliemeyer/sched-py' target='_blank' class='button'>Source</a>
         </div>
         
         <div class='card project'>
@@ -115,7 +131,7 @@
       </div>
 
       <footer style='margin-top: 35px;'>
-        <p><b>&copy; Charlie Meyer <script>document.write(new Date().getFullYear());</script></b> | No UI frameworks were harmed (or used) in the making of this website </p>
+        <p><b>&copy; Charlie Meyer <script>document.write(new Date().getFullYear());</script></b></p>
         <a href='mailto:charles.meyer@tufts.edu'>Email</a>
         <a href='http://github.com/charliemeyer' target="_blank">Github</a>
       </footer>
