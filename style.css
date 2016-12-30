@@ -1,30 +1,63 @@
+html {
+    height: 100vh;
+}
+
 body {
     text-align: center;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Roboto', serif;
     padding: 0px;
     margin: 0px;
-    background-color: #ECEFF1;
+    background-color: #F5F5F5;
     color: #303030;
+    height: 100vh;
+}
+
+#canvas {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100%;
 }
 
 #content {
-    width: 60%;
-    max-width: 1000px;
-    min-width: 700px;
-    margin: 0px auto;
+    position: absolute;
+    top: 0;  /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+    transform: translateX(-50%); /* This is a shorthand of
+                                             translateX(-50%) and translateY(-50%) */
+    width: 700px;
     padding: 20px;
     clear: both;
+    /*height: calc(100% - 140px);*/
+    background: rgba(0, 0, 0, 0);
+    z-index: 1000;
+    height: 100%;
+}
+
+.big {
+    font-size: 20px;
+}
+
+.med {
+    font-size: 16px;
+}
+
+.normal {
+    font-size: 12px;
 }
 
 .card {
-    padding: 20px 25px;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    background-color: #FFFFFF;
+    padding: 15px 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.16), 0 2px 4px rgba(0,0,0,0.23);
     margin: 20px auto;
+    position: relative;
+    z-index: 1000;
+    background: rgba(255, 255, 255, .85);
 }
 
 h1, h2, h3, h4, h5, h6 {
-    margin: 10px 0px;
+    margin: 5px 0px;
 }
 
 p {
@@ -36,7 +69,7 @@ p {
 }
 
 a:visited {
-    color: #1976D2;
+    color: #303030;
 }
 
 #header a {
@@ -51,11 +84,11 @@ a:visited {
 }
 
 #header p {
-    margin: 5px 10px;
+    margin: 5px;
 }
 
 #picture {
-    width: 240px;
+    height: 240px;
     float: right;
 }
 
@@ -80,59 +113,71 @@ a:visited {
     text-align: justify;
 }
 
+.button:hover {
+    cursor: pointer;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
 .project a.button {
-    background-color: #2196F3; 
+    background-color: #424242; 
     display: inline-block;
     text-decoration: none;
-    margin: 10px 5px;
+    margin: 10px 5px 0px 5px;
     text-align: center;
     color: white;
     padding: 5px;
-    width: 75px;
+    width: 50px;
     font-size: 12px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
 .project a.button:hover {
     color: white;
-    background-color: #1976D2;
+    background-color: #212121;
     animation: linkhover;
     -webkit-transition-duration: 200ms;
     transition-duration: 200ms;
 }
 
+.project ul {
+    margin: 0px;
+}
+
 #navigation {
-    width: 368px;
+    width: 309px;
     margin: 20px auto;
     text-align: left;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    background-color: #2196F3; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.16), 0 2px 4px rgba(0,0,0,0.23);
+    background-color: #424242; 
 }
 
 #navigation a {
-    background-color: #2196F3; 
+    background-color: #424242; 
     display: inline-block;
     text-decoration: none;
     text-align: center;
     color: white;
     padding: 12px 10px;
     font-size: 16px;
-    width: 100px;
+    width: 80px;
     margin: 0px;
 }
 
 #navigation a.active {
-    background-color: #1976D2;
+    background-color: #212121;
 }
 
 @keyframes linkhover{
-  from {background-color: #2196F3}
-  to {background-color: #1976D2}
+  from {background-color: #424242}
+  to {background-color: #212121}
 }
 
 #navigation a:hover{
     color: white;
-    background-color: #1976D2;
+    background-color: #212121;
     animation: linkhover;
     -webkit-transition-duration: 200ms;
     transition-duration: 200ms;
@@ -142,6 +187,11 @@ a:visited {
   from {background-color: #424242}
   to {background-color: #212121}
 }
+
+footer {
+    position: relative;
+}
+
 
 footer a:hover {
     color: white;
@@ -168,6 +218,10 @@ footer a {
     #content {
         min-width: 0px;
         width: calc(100% - 40px);
+    }
+
+    #picture {
+        display: none;
     }
 
     #header {

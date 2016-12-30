@@ -3,32 +3,34 @@
   <head>
     <title>charliemeyer.co</title>
     <link rel="stylesheet" type="text/css" href="style.css"/>
-    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'/>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'/>
     <meta charset="utf-8" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="tabs.js"></script>
+    <script src="raphael.js"></script>
     <meta name="viewport" content="width=device-width, user-scalable=no">
   </head>
   <body>
-
-    <div id="content">
+  <div id="canvas"></div>
+    <div id="content" style='display:none;'>
       <div id='header' class='card'>
         <div style='width: calc(100%-300px); float: left; text-align: left;'>
-          <h2>Charlie Meyer</h2>
-          <p>Tufts University '17</p>
+          <h2>charliemeyer.co</h2>
+          <i>"Because the .com was already taken"</i>
+          <p>Tufts University '17 Math and CS</p>
           <p><a href='mailto:charles.meyer@tufts.edu'>charles.meyer@tufts.edu</a></p>
           <p><a href='http://github.com/charliemeyer' target='_blank'>github.com/charliemeyer</a></p>
-          <p>Aspiring software engineer, data scientist, teacher.</p>
+          <p>Aspiring software engineer, teacher, musician</p>
         </div>
         <div id='picture'>
-          <a href="me.jpg"><img id="picture" src="me_thumb.png" alt="Charlie Meyer's picture"></a>
+          <img id="picture" src="me.png" alt="Charlie Meyer's picture">
         </div>
         <div style='clear:both;'></div>
       </div>
       <div id="navigation">
         <a href='#aboutme'>About Me</a>
         <a href="#projects">Projects</a>
-        <a href="charles_meyer_resume.pdf">Resume</a>
+        <a href="charles_meyer_resume.pdf" target="_blank">Resume</a>
       </div>
 
       <div class='card' id='aboutme'>
@@ -49,11 +51,42 @@
             <li>Won the Google API prize at the Tufts Spring 2014 Hackathon</li>
             <li>Over 20,000 plays on the web since public release in July 2014.</li>
             <li>Built with Eric Bailey, I made the frontend and game mechanics.</li>
-            <li>Techcrunch: <a href='http://techcrunch.com/2015/11/20/trendquiz-is-a-super-addictive-game-using-google-trends-data/?ncid=rss'>"Trendquiz Is A Super Addictive Game Using Google Trends Data"</a></li>
+            <li>Techcrunch: <a style='color:#303030' href='http://techcrunch.com/2015/11/20/trendquiz-is-a-super-addictive-game-using-google-trends-data/?ncid=rss'>"Trendquiz Is A Super Addictive Game Using Google Trends Data"</a></li>
         </ul>    
         <a href='http://trendquiz.com' target='_blank' class='button'>Link</a>
         <a href='https://github.com/ebcmsoftware/trendquiz' target='_blank' class='button'>Source</a>
         </div>
+
+        <div class='card project'>
+        <h3>Auto Sched</h3>
+        <ul>
+            <li>Solution for scheduling people for work shifts.</li>
+            <li>Has a web front end running on Google App Engine for collecting availability data.</li> 
+            <li>Optimal schedules are approximated using a probabilistic algorithm implemented in Python. (finding an optimal schedule is NP hard)</li>
+            <li>Built by me to help speed up my TA scheduling duties as Comp40 teaching fellow.</li>
+        </ul>
+        <a href='https://github.com/charliemeyer/sched-py' target='_blank' class='button'>Source</a>
+        </div>
+
+        <div class='card project'>
+        <h3>Data Depth Explorer</h3>
+        <ul>
+            <li>Visualization of different data depth definitions</li>
+            <li>Used Raphael.js for SVG/animations</li> 
+            <li>Created for Tufts Comp163 Computational Geometry</li>
+        </ul>
+        <a href='http://charliemeyer.co/datadepth' target='_blank' class='button'>Link</a>
+        </div>
+
+        <div class='card project'>
+        <h3>tommeyerart.com</h3>
+        <ul>
+            <li>Portfolio site for my dad's art</li>
+            <li>Hosted on Google App Engine, uses PhotoSwipe.js on frontend</li> 
+        </ul>
+        <a href='http://tommeyerart.com' target='_blank' class='button'>Link</a>
+        </div>
+
 
         <div class='card project'>
         <h3>Knoknok</h3>
@@ -63,21 +96,10 @@
             <li>1000+ downloads on App Stores (Knoknok no longer on Apple App Store)</li>
             <li>Designed and built with Eric Bailey, I made the UI and dealt with integration with PhoneGap</li>
         </ul>
-        <a href='https://play.google.com/store/apps/details?id=com.ebcmsoftware.knoknok&hl=en' target='_blank' class='button' style='width: 150px;'>Link (Google Play)</a>
+        <a href='https://play.google.com/store/apps/details?id=com.ebcmsoftware.knoknok&hl=en' target='_blank' class='button' style='width: 100px;'>Link (Google Play)</a>
         <a href='https://github.com/ebcmsoftware/knoknok2' target='_blank' class='button'>Source</a>
         </div>
 
-        <div class='card project'>
-        <h3>Auto Sched</h3>
-        <ul>
-            <li>Solution for scheduling people for work shifts.</li>
-            <li>Has a web front end running on Google App Engine for collecting worker availability data</li> 
-            <li>Optimal schedules are approximated using a probabilistic algorithm implemented in Python. (finding an optimal schedule is NP hard)</li>
-            <li>Built by me to help speed up my TA scheduling duties as Comp40 teaching fellow.</li>
-        </ul>
-        <a href='https://github.com/charliemeyer/sched-py' target='_blank' class='button'>Source</a>
-        </div>
-        
         <div class='card project'>
         <h3>"Universal Machine": RISC-style emulator</h3>
         <ul>
@@ -96,16 +118,6 @@
             <li>I built the backend and integrated HandlebarsJS templating into the app</li>
         </ul>
             <a href='https://wecooktufts.com' target='_blank' class='button'>Source</a>
-        </div>
-
-        <div class='card project'>
-        <h3>Group Project Helper</h3>
-        <ul>
-            <li>Pairs students for group projects based on the overlapping free time in their Google calendars</li>
-            <li>Won the Tufts Tools prize at the Tufts Fall 2014 Hackathon</li>
-            <li>Made with Eric Bailey, Colin Hamilton, and Nolan Hawkins</li>
-        </ul>
-        <a href='https://github.com/ebcmsoftware/gph' target='_blank' class='button'>Source</a>
         </div>
 
         <div class='card project'>
@@ -128,12 +140,11 @@
         <a href='https://github.com/charliemeyer/basic-watchface' target='_blank' class='button'>Source</a>
         </div>
       </div>
-
-      <footer style='margin-top: 35px;'>
+      <footer>
         <p><b>&copy; Charlie Meyer <script>document.write(new Date().getFullYear());</script></b></p>
-        <a href='mailto:charles.meyer@tufts.edu'>Email</a>
-        <a href='http://github.com/charliemeyer' target="_blank">Github</a>
       </footer>
+        <script src="dag.js"></script>
+
     </div>
   </body>
 </html>
