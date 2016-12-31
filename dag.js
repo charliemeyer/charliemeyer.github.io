@@ -12,15 +12,20 @@ var num_points = 10;
 var points = [];
 
 $(document).ready(function() {
+    generate_background();
+    $("#content").fadeIn(50);
+    $("#regenerate).click(generate_background);
+});
+
+function generate_background() {
+    paper.clear();
     for (var i = 0; i < num_points; i++) {
         points.push(draw_point(Math.round(Math.random()*paper_w), Math.round(Math.random()*paper_h), "#000000", 4));
     }
     for (var i = 0; i < num_points-1; i++) {
         draw_path(points[i], points[i+1], "#000000", 1);
     }
-
-    $("#content").fadeIn(50);
-});
+}
 
 // Draw point on canvas at x y with given color and radius
 function draw_point(x, y, color, radius) {
