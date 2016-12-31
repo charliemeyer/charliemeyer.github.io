@@ -18,9 +18,12 @@ $(document).ready(function() {
 });
 
 function generate_background() {
+    var paper_w = $("#canvas").width();
+    var paper_h = $("#canvas").height();
     paper.clear();
+    points = [];
     for (var i = 0; i < num_points; i++) {
-        points.push(draw_point(Math.round(Math.random()*paper_w), Math.round(Math.random()*paper_h), "#000000", 4));
+        points.push(draw_point(Math.round(Math.random()*paper_w), Math.round(Math.random()*paper_h), "#000000", 5));
     }
     for (var i = 0; i < num_points-1; i++) {
         draw_path(points[i], points[i+1], "#000000", 1);
