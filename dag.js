@@ -14,7 +14,7 @@ var points = [];
 $(document).ready(function() {
     generate_background();
     $("#content").fadeIn(50);
-    $("#regenerate).click(generate_background);
+    $("#regenerate").click(generate_background);
 });
 
 function generate_background() {
