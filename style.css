@@ -97,7 +97,7 @@ a:visited {
 }
 
 #bio {
-    margin-left: 15px;
+    margin-left: 0px;
 }
 
 .project {
@@ -121,7 +121,7 @@ a:hover {
     cursor: pointer;
 }
 
-.button {
+p.button {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
