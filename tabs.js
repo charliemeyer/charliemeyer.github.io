@@ -12,7 +12,6 @@ $(document).ready(function() {
     });
 
     $(this).on('click', 'a', function(e){
-        generate_background();
         if($(this).attr('href')[0] == '#'){
             active.removeClass('active');
             $('.selected').removeClass('selected');
